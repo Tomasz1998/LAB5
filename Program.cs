@@ -63,7 +63,7 @@ namespace LAB5
             
             Console.WriteLine("Jakiej książki szukasz");
             string Szukana = Console.ReadLine();
-            for (int i = 0; i < array1.GetLength(1); i++)
+            for (int i = 0; i < array1.GetLength(0); i++)
             {
                 for (int j = 0; j < array1.GetLength(1); j++)
                 {
