@@ -12,21 +12,27 @@ namespace LAB5
         {
             //Console.ForegroundColor = ConsoleColor.Black;   
             Ksiazka[,,] array1 = new Ksiazka[3, 6, 10];
+
+
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 6; j++)
                 {
                     for (int k = 0; k < 10; k++)
                     {
-
-                        array1[i, j, k] = new Ksiazka("Potop", "Sienkiewicz",i,j,k);
+                        array1[i, j, k] = new Ksiazka("Puste Miejsce", " ", i, j, k);
                     }
                 }
             }
-        
-            
 
-          
+            array1[1, 1, 1] = new Ksiazka()
+            {
+                Tytul = "Potop",
+                Autor = "Henryk Sienkiewicz",
+                Miejsce = 1,
+                Polka = 1,
+                Regal = 1,
+            };
             array1[2, 4, 6] = new Ksiazka()
             {
                 Tytul = "Gra o tron",
@@ -49,7 +55,8 @@ namespace LAB5
                 {
                     for (int k = 0; k < 10; k++)
                     {
-                        Console.WriteLine(array1[i, j, k]);
+                        Console.WriteLine(array1[i, j, k].Autor);
+                        Console.WriteLine(array1[i, j, k].Tytul);
                     }
                 } 
             }
@@ -70,6 +77,7 @@ namespace LAB5
                     }
                 }
             }
+            Console.ReadKey();
         }
     }
 }
