@@ -14,11 +14,11 @@ namespace LAB5
             Ksiazka[,,] array1 = new Ksiazka[3, 6, 10];
 
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < array1.GetLength(0); i++)
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < array1.GetLength(1); j++)
                 {
-                    for (int k = 0; k < 10; k++)
+                    for (int k = 0; k < array1.GetLength(2); k++)
                     {
                         array1[i, j, k] = new Ksiazka("Puste Miejsce", " ", i, j, k);
                     }
@@ -49,11 +49,11 @@ namespace LAB5
                 Polka = 5,
                 Regal = 1,
             };
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < array1.GetLength(0); i++)
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < array1.GetLength(1); j++)
                 {
-                    for (int k = 0; k < 10; k++)
+                    for (int k = 0;  k < array1.GetLength(2); k++)
                     {
                         Console.WriteLine(array1[i, j, k].Autor);
                         Console.WriteLine(array1[i, j, k].Tytul);
@@ -63,11 +63,11 @@ namespace LAB5
             
             Console.WriteLine("Jakiej książki szukasz");
             string Szukana = Console.ReadLine();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < array1.GetLength(1); i++)
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < array1.GetLength(1); j++)
                 {
-                    for (int k = 0; k < 10; k++)
+                    for (int k = 0; k < array1.GetLength(2); k++)
                     {
                         if(array1[i,j,k].Autor == Szukana || array1[i,j,k].Tytul == Szukana)
                         {
